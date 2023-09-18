@@ -7,7 +7,11 @@ function Details({ count, adult, selectValue, setShowPinCode }) {
     const { data, setData, postData, setPostData } = useContext(PremiumContext)
 
     useEffect(() => {
-        setPostData({ ...postData, "adults": adult, children: count, ages: data })
+        if (selectValue.includes("Children")) {
+            setPostData({ ...postData, "adults": adult, ages: data, "children": count })
+        } else {
+            setPostData({ ...postData, "adults": adult, ages: data, "children": 0 })
+        }
         // eslint-disable-next-line
     }, [count, adult, data])
 

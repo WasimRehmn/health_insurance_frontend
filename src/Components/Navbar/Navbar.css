@@ -4,3 +4,14 @@
     margin-bottom: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.homeContainer {
+    font-size: 21px;
+    /* border: 1px solid red; */
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

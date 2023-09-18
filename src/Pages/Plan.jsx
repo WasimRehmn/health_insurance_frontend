@@ -31,63 +31,67 @@ function Plan() {
 
 
     return (
-        <div className='planMainContainer'>
-            <div className='planContainer'>
-                <div className='plainHeading'>Plan on the basis of your information</div>
+        <>
+            {selectData.length === 0 ?
+                <div className='someThing'>Something Went Wrong! Try Again</div>
+                :
+                <div className='planMainContainer'>
+                    <div className='planContainer'>
+                        <div className='plainHeading'>Plan on the basis of your information</div>
 
 
-                <div className='sum_assured_con'>
-                    <p>Choose you Sum Assured</p>
-                <select onChange={(e) => handleOption(e)} >
-                    {selectData?.map((elem) => {
-                        return (
-                            <option value={elem.sum_assured}>{(+elem.sum_assured).toLocaleString('en-IN')}</option>
-                        )
-                    })}
+                        <select onChange={(e) => handleOption(e)} >
+                            {selectData?.map((elem) => {
+                                return (
+                                    <option value={elem.sum_assured}>{elem.sum_assured}</option>
+                                )
+                            })}
 
-                </select>
-                </div>
-            </div>
+                        </select>
+                    </div>
 
 
 
-            <table className='planTable'>
-                <thead>
-                    <tr>
-                        <th></th>
-                        {showObj[0]?.premium_breaks.map((elem) => {
-                            return (
-                                <th>{elem.user_type.toUpperCase().replace(/_/g, ' ')}</th>
-                            )
-                        })}
-                    </tr>
-                </thead>
-                <tbody>
-                    <td>
-                        <tr>Base Rate</tr>
-                        <tr>Discounted Rate</tr>
-                        <tr>Floater Discount</tr>
-                    </td>
-                    {showObj[0]?.premium_breaks.map((elem) => {
-                        return (
+                    <table className='planTable'>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                {showObj[0]?.premium_breaks.map((elem) => {
+                                    return (
+                                        <th>{elem.user_type.toUpperCase().replace(/_/g, ' ')}</th>
+                                    )
+                                })}
+                            </tr>
+                        </thead>
+                        <tbody>
                             <td>
-                                <tr>₹ {elem.base_rate.toLocaleString('en-IN')}</tr>
-                                <tr>₹ {elem.discounted_rate.toLocaleString('en-IN')}</tr>
-                                <tr>{elem.floater_discount} %</tr>
+                                <tr>Base Rate</tr>
+                                <tr>Discounted Rate</tr>
+                                <tr>Floater Discount</tr>
                             </td>
-                        )
-                    })}
+                            {showObj[0]?.premium_breaks.map((elem) => {
+                                return (
+                                    <td>
+                                        <tr>{elem.base_rate}</tr>
+                                        <tr>{elem.discounted_rate}</tr>
+                                        <tr>{elem.floater_discount} %</tr>
+                                    </td>
+                                )
+                            })}
 
-                </tbody>
-            </table>
+                        </tbody>
+                    </table>
 
-            <div className='planbutton'>
-                <div>Total - ₹ {showObj[0]?.total.toLocaleString('en-IN')}</div>
-                <button onClick={(() => navigate("/checkout"))} className='addToCart'>Add to cart</button>
-            </div>
+                    <div className='planbutton'>
+                        <div>Total - ₹ {showObj[0]?.total}</div>
+                        <button onClick={(() => navigate("/checkout"))} className='addToCart'>Add to cart</button>
+                    </div>
 
 
-        </div >
+                </div >
+            }
+        </>
+
     )
 }
 

@@ -54,3 +54,10 @@ th {
     display: flex;
     gap: 0.5rem;
 }
+
+.someThing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
