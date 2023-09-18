@@ -1,0 +1,10 @@
+.counterContainer {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 3px;
+}
+
+.pointer {
+    cursor: pointer;
+}

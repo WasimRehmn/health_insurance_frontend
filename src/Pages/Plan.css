@@ -1,0 +1,56 @@
+.planMainContainer {
+    border: 0.5px solid #666;
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.plainHeading {
+    font-size: 18px;
+    font-weight: medium;
+}
+
+.planTable {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+
+}
+
+
+th {
+    background-color: #f2f2f2;
+}
+
+.planbutton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addToCart {
+    height: 30px;
+    cursor: pointer;
+}
+
+.planContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sum_assured_con{
+    display: flex;
+    gap: 0.5rem;
+}

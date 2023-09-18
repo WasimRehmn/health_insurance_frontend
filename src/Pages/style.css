@@ -1,0 +1,103 @@
+.homeMainContainer {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.homeHeroImage {
+    /* border: 1px solid red; */
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.homeHeroImage>img {
+    height: 100%;
+    width: 50%;
+    object-fit: contain;
+}
+
+.homeSecondContainer {
+    /* border: 1px solid green; */
+    width: 50%;
+    display: flex;
+    padding-left: 0.5rem;
+    flex-direction: column;
+}
+
+.homeMainHeading {
+    font-size: 28px;
+
+}
+
+.homeSubMainHeading {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 5px;
+}
+
+.homeHeading {
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.homeInputMainContainer {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.homeMapContainer {
+    display: flex;
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    gap: 0.2rem;
+}
+
+.homeSecondMapContainer,
+.homeCheckBoxContainer {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+
+}
+
+.homeSecondMapContainer {
+    justify-content: space-between;
+}
+
+.counterMainContainer {
+    border: 1px solid #666;
+    width: 60px;
+    border-radius: 5px;
+}
+
+.continueMainContainer {
+    border: 1px solid #666;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.detailSecondMaincontainer {
+    width: 50%;
+}
